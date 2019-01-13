@@ -4,18 +4,25 @@
 #
 # Author:      Азат
 #
-# Created:     26.11.2018
+# Created:     10.12.2018
 # Copyright:   (c) Азат 2018
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
-f=open('Dlyalaby4.txt','r')
-f1=open('lab4.2.txt','w+')
-k=0
-for i in f:
-    i = i.split()
-    if (i[1] == "английский"):
-        k+=1
-        f1.write(str(i[0] + " " + i[1]+" "+ i[2] + " " + i[len(i)-1] + "\n"))
-print(k)
-f.close()
-f1.close()
+
+import Lab7
+
+m = 5
+n = 5
+
+a = Lab7.MassIn(m, n)
+
+Lab7.MassOu(m, n, a)
+
+print('\nProiz:',Lab7.MoDUL(m, n, a))
+print()
+x = int(input(print('X =')))
+Lab7.OutMax(m, n, a, x)
+print('\n')
+
+Lab7.MoDUL(m, n, a)
+Lab7.MassOu(n, m, a)

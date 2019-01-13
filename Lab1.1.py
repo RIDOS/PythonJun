@@ -8,14 +8,18 @@
 # Copyright:   (c) Азат 2018
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
-f=open('Dlyalaby4.txt','r')
-f1=open('lab4.2.txt','w+')
-k=0
-for i in f:
-    i = i.split()
-    if (i[1] == "английский"):
-        k+=1
-        f1.write(str(i[0] + " " + i[1]+" "+ i[2] + " " + i[len(i)-1] + "\n"))
-print(k)
-f.close()
-f1.close()
+
+list = []
+sum = 0
+for i in range(4, 33):
+    list.append(i + 10)
+    sum += i+10
+
+print('List :', list)
+print('Len  :', len(list))
+print('Sum  :', sum)
+
+print('\n-------DELET-------\n')
+del list
+print(list)
+print('\n-------SUCCESS-----\n')
